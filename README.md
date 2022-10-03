@@ -4,7 +4,7 @@ This is an implementation of the game 'Rock Paper Scissors'. The user plays agai
 
 Technologies:
 - FastAPI
-- SQLite
+- SQLAlchemy with SQLite
 - Angular 14
 
 ### Installation
@@ -18,11 +18,12 @@ Technologies:
    npm install
    npm start
    ```
-2. Open a terminal tab for the backend and, from the root directory, run the following commands:
+3. Open a terminal tab for the backend and, from the root directory, run the following commands:
    ```sh
    pip install -r sql_app/requirements.txt
    uvicorn sql_app.main:app --reload
    ```
+4. Go to http://localhost:4200/ in your browser.
 
 ### Thought Process
 - I chose to have the user play against the computer due to time constraints. 
