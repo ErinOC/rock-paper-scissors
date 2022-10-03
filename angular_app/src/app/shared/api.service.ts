@@ -10,10 +10,6 @@ interface IUserDetails {
   name: string;
 }
 
-interface IGetUserPayload {
-  email: string;
-}
-
 interface IUserUpdate {
   user_score: number;
   opponent_score: number;

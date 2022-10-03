@@ -50,6 +50,7 @@ export class GameComponent implements OnInit {
 
     if (userChoice && userChoice.beats === computerChoice.name) {
       winner = userChoice;
+      // TODO_IMPROVE: use the user's actual name!
       this.outcome = 'You win!';
       this.userScore += 1;
     } 
@@ -77,7 +78,6 @@ export class GameComponent implements OnInit {
   public save(): void {
     this.stateService.user$
       .pipe(
-        tap(res => console.log("???", res)),
         map(user => user.email),
         switchMap(email => {
           return this.apiService.updateUser({
