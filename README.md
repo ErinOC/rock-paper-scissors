@@ -11,7 +11,7 @@ Technologies:
 
 1. Clone the repo
    ```sh
-   git@github.com:ErinOC/rock-paper-scissors.git
+   git clone git@github.com:ErinOC/rock-paper-scissors.git
    ```
 2. Open a terminal tab for the frontend and, from the angular_app directory, run the following commands:
    ```sh
