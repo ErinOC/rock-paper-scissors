@@ -1,0 +1,29 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div *ngIf="!isNewUserCreation">
+    <h2>Welcome!</h2>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your email address</mat-label>
+        <input 
+            matInput
+            input
+            placeholder="" 
+            [formControl]="email" 
+            required>
+    </mat-form-field>
+  </div>
+
+  <div *ngIf="isNewUserCreation">
+    <h2>Looks like it's your first time.</h2>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your name</mat-label>
+        <input 
+            matInput
+            input
+            placeholder="" 
+            [formControl]="name" 
+            required>
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button type="submit" color="primary">Continue</button>
+</form>

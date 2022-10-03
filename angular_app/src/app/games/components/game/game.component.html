@@ -1,0 +1,48 @@
+<section id="score">
+    <div>
+        <span>You: {{ userScore }}</span><br>
+        <span>Computer: {{ computerScore }}</span><br>
+        <button
+            mat-raised-button 
+            type="submit" 
+            (click)="save()">
+            Save Your Score
+        </button>
+    </div>
+</section>
+
+<form *ngIf="!outcome" (ngSubmit)="submit()">
+    <mat-radio-group 
+        [(ngModel)]="selection"
+        [ngModelOptions]="{standalone: true}"
+        aria-label="Select an option">
+        <mat-radio-button 
+            *ngFor="let choice of choices"  
+            name="choice"
+            ngClass="{'selected': selection === choice.name}"
+            value="{{choice.name}}">
+            <span class="icon">{{ choice.icon }}</span>
+        </mat-radio-button>
+    </mat-radio-group>
+
+    <br>
+    <button
+        mat-raised-button 
+        type="submit" 
+        color="primary" 
+        [disabled]="!selection">
+        Shoot!
+    </button>
+</form>
+
+<section id="outcome" *ngIf="outcome">
+    <p id="outcomeText">{{ outcome }}</p>
+    <p *ngIf="outcomeDetails" id="outcomeDetails">{{ outcomeDetails }}</p>
+    <button
+        mat-raised-button 
+        type="submit" 
+        color="primary" 
+        (click)="reset()">
+        Play Again
+    </button>
+</section>

@@ -1,0 +1,54 @@
+.clearfix {
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear:both;
+    }
+}
+
+#score {
+    width: 100%;
+    .clearfix;
+    padding-bottom: 1rem;
+    div {
+        display: block;
+        float: right;
+        padding: 1rem;
+        background-color: #f2eeee;
+    }
+}
+
+form {
+    text-align: center;
+    button {
+        font-size: 2rem;
+        padding: 1rem;
+    }   
+}
+
+.icon {
+    font-size: 80px;
+}
+
+mat-radio-button {
+    margin: 2rem;
+}
+
+#outcome {
+    text-align: center;
+}
+
+#outcomeText {
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 2;
+}
+
+#outcomeDetails {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+

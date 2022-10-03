@@ -1,0 +1,18 @@
+<header>
+  <h1>Rock Paper Scissors</h1>
+</header>
+
+<main
+  *ngIf="{
+    user: (user$ | async)
+  } as all"
+>
+  <ng-container *ngIf="!all.user?.name">
+    <app-identify-user></app-identify-user>
+  </ng-container>
+
+  <ng-container *ngIf="all.user?.name">
+    <app-game></app-game>
+  </ng-container>
+</main>
+
